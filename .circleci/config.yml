@@ -24,7 +24,7 @@ jobs:
       - run :
           name: " Print hello"
           command: "echo Hello"
-   print-world:
+  print-world:
     docker:
       - image: cimg/base:stable
     steps:
@@ -41,3 +41,4 @@ workflows:
       - print-hello
       - print-world 
         
+
