@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "store hello"
-          run: |
+          command: |
             mkdir -p workspace
             echo "Hello, world!" > workspace/echo-output
       - persist_to_workspace:
