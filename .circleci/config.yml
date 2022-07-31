@@ -32,7 +32,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-        at: /tmp/workspace
+         at: /tmp/workspace
       - run: |
           if [[ `cat /tmp/workspace/echo-output` == "Hello, world!" ]]; then
             echo "It worked!";
@@ -44,11 +44,11 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  hello-workflow:
     jobs:
       - store-hello
       - read-hello:
-        requires:
-        - store-hello
+          requires:
+            - store-hello
         
 
