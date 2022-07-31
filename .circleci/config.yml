@@ -31,6 +31,15 @@ jobs:
       - run :
           name: " Print world"
           command: "echo world"
+  print-myname:
+    docker:
+      - image: cimg/base:stable
+    environment:
+      - NAME : roufyda
+    steps:
+      - run :
+          name: " My Name"
+          command: echo ${NAME}
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
