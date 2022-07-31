@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "store hello"
           run: mkdir -p workspace
-          command:  echo "Hello, world!" > workspace/echo-output
+          run: echo "Hello, world!" > workspace/echo-output
       - persist_to_workspace:
           root: workspace
           paths:
