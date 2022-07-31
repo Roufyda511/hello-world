@@ -49,5 +49,6 @@ workflows:
       - say-hello
       - print-hello
       - print-world 
+      - print-myname
         
 
