@@ -16,10 +16,13 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
   
     steps:
-      - failure:
-          run: return 1
-      - on_failure:
-          run : echo "Failure"
+      - run:
+          name: failure
+          command: return 1
+          
+      - run:
+          name: on_failure
+          command : echo "Failure"
           when: on_fail
 
 
