@@ -3,13 +3,13 @@
 version: 2.1
 commands:
   - print_pipeline_id:
-    description: "A very simple command for printing pipeline id"
-    parameters:
-      to:
-        type: string
-        default: "111"
-    steps:
-      - run: echo << parameters.to >>
+      description: "A very simple command for printing pipeline id"
+      parameters:
+        to:
+          type: string
+          default: "111"
+      steps:
+        - run: echo << parameters.to >>
 
 
 # Define a job to be invoked later in a workflow.
