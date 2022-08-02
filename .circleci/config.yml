@@ -6,8 +6,8 @@ version: 2.1
         description: "A very simple command for printing pipeline id"
         parameters:
           to:
-            type: number
-            default: 1
+            type: string
+            default: "111"
         steps:
           - run: echo << parameters.to >>
 
